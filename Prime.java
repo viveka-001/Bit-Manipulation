@@ -1,34 +1,20 @@
-
 import java.util.*;
-
+import java.lang.*;
 
 public class Prime{
+    public static void main(String args[]){
+    Scanner sc=new Scanner(System.in);
+    int n=sc.nextInt();
+    for(int i=2;(i*i)<n;i++)
+    {
+        if(n%i==0)//if there is any factor;
+        {
+            System.out.print("NOT A PRIME NUMBER");
+            System.exit(0);
+        }
+    }
+    System.out.print("PRIME NUMBER");
+    }
 
-   public static void main (String[] args){
-   		
-       int n=sc.nextInt();
-
-       for (int i = 1; i <= n; i++){         
-       		  	  
-          int c=0;
- 	  
-          for(int num =i; num>=1; num--){
-	  
-             if(i%num==0){
-	     
- 		c=+1;;
-
-	     }
-
-	  }
-
-	  if (c==2){
-	  
-	     prime= prime + i + " ";
-	  }
-	
-       }
-	
-       System.out.println(prime);
-   }
+    
 }
